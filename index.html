@@ -37,7 +37,7 @@
 						</div>
 
 						<div v-for="(objSlide, i) in arrImages" :key="objSlide.image" class="slide" :class="i === activeIndex ? 'active' : ''">
-							<img :src="arrImages.image" :alt="objSlide.title">
+							<img :src="arrImages.image" :alt="arrImages.title">
 							<div class="text">
 								<h2>{{ objSlide.title }}</h2>
 								<p>{{ objSlide.text }}</p>
@@ -49,7 +49,7 @@
 						<img
 							v-for="(objSlide, i) in arrImages"
 							:key="objSlide.image"
-							:src="'img/' + objSlide.image"
+							:src="objSlide.image"
 							class="thumb-img"
 							:class="{active: i === activeIndex}"
 							@click="setActiveIndex(i)"
